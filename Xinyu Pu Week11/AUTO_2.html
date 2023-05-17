@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>sound cellular automata</title>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.6/Tone.js"></script>
+     <meta charset="utf-8">
+     <style>
+          body {
+               background: #eee;
+               display: grid;
+               grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          }
+
+          canvas {
+               width: 100%;
+               max-width: 800px;
+               margin: auto;
+          }
+
+          button {
+               display: block;
+               margin: 10px auto;
+          }
+
+          .link-box {
+               display: grid;
+               grid-template-areas: 'link link1';
+               cursor: pointer;
+          }
+
+          .link-box p {
+               grid-area: link;
+               padding: 10px;
+               background-color: #ccc;
+          }
+
+          .link-box span {
+               grid-area: link1;
+          }
+
+          @media(max-width:600px) {
+               body {
+                    grid-template-columns: 1fr;
+               }
+          }      
+     </style>
+</head>
+<body>
+     <canvas id="canvas"></canvas></br>
+     <div class="link-box">
+          <p>Click to jump </p>
+          <span></span>
+     </div>
+     <script src="./javascript/scripts1.js"></script>
+     <button onclick=drawSwich2()>B_AUTO_SLOW</button>
+     <button onclick=drawSwich()>B_AUTO</button>
+    
+     <script>
+          const linkBox = document.querySelector('.link-box');
+          const url = 'https://github.com/pxysean/portfolio.git';
+
+          linkBox.onclick = () => {
+              window.location.href = url;
+          };
+     </script>
+</body>
+</html>
